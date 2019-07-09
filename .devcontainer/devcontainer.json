@@ -1,0 +1,13 @@
+{
+    "name": "PHP",
+    "dockerComposeFile": "../containers/docker-compose.yaml",
+    "service": "php-fpm",
+    "workspaceFolder": "/var/www/html",
+    "extensions": [
+        "felixfbecker.php-debug",
+        "felixfbecker.php-intellisense"
+    ],
+    "settings": {
+        "terminal.integrated.shell.linux": "/bin/bash"
+    }
+}
