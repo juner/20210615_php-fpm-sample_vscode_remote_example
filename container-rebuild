@@ -1,0 +1,12 @@
+#!/bin/sh
+NAMESPACE=ariela
+TAG=1.0
+PREVIOUS_DIR=$(pwd)
+CURRENTS_DIR=$(cd $(dirname $0); pwd)
+
+cd ${CURRENTS_DIR}
+
+docker build --force-rm --no-cache -t ${NAMESPACE}/nginx:latest   -t ${NAMESPACE}/nginx:${TAG}   -f containers/nginx/Dockerfile .
+docker build --force-rm --no-cache -t ${NAMESPACE}/php-fpm:latest -t ${NAMESPACE}/php-fpm:${TAG} -f containers/php-fpm/Dockerfile .
+
+cd ${PREVIOUS_DIR}
