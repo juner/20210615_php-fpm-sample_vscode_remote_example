@@ -1,6 +1,6 @@
 {
     "name": "PHP",
-    "dockerComposeFile": "../containers/docker-compose.yaml",
+    "dockerComposeFile": "./docker-compose.yml",
     "service": "php-fpm",
     "workspaceFolder": "/var/www/html",
     "extensions": [
