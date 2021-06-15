@@ -1,2 +1,3 @@
 <?php
-echo phpinfo();
+http_response_code(401);
+phpinfo();
